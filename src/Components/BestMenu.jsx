@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "./card";
+import Card from "./Card";
 
 export default function BestMenu() {
   return (
-    <section id="best-menu" className="flex flex-col items-center justify-center text-xl space-y-12 -mx-24 px-24 bg-[#E1BC64] py-8">
+    <section id="best-menu" className="flex flex-col items-center justify-center text-xl space-y-12 -mx-24 px-24 bg-[#E1BC64] py-16">
       <div className="text-center space-y-4">
         <h1 className="text-[#6D4F25] text-xl">BEST MENU</h1>
         <h1 className="text-white text-4xl">POPULAR FOOD IN OUR RESTAURANT</h1>

@@ -1,6 +1,7 @@
 import Nav from "../Components/Nav";
 import Hero from "../Components/Hero";
 import BestMenu from "../Components/BestMenu";
+import AboutUs from "../Components/AboutUs";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <BestMenu />
+      <AboutUs />
     </section>
   );
 }
