@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Nav() {
   return (
-    <nav id="nav" className="lg:px-16 px-8 flex items-center justify-between xl:text-xl lg:text-lg">
+    <nav id="nav" className=" flex items-center justify-between xl:text-xl lg:text-lg">
       <div className="flex items-center justify-between lg:gap-6 gap-2">
         <img src="img/logo.png" alt="" className="lg:w-10 w-6" />
         <h1 className="text-[#6D4F25] font-medium">Tastico</h1>
