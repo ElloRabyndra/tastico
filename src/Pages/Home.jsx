@@ -2,6 +2,7 @@ import Nav from "../Components/Nav";
 import Hero from "../Components/Hero";
 import BestMenu from "../Components/BestMenu";
 import AboutUs from "../Components/AboutUs";
+import Footer from "../Components/Footer";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <BestMenu />
       <AboutUs />
+      <Footer />
     </section>
   );
 }
