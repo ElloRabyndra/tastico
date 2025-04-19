@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 export default function Nav() {
   return (
@@ -8,11 +9,31 @@ export default function Nav() {
         <h1 className="text-[#6D4F25] font-medium">Tastico</h1>
       </div>
       <ul className="flex lg:gap-6 gap-2 py-8 text-black items-center justify-end">
-        <li className="hover:text-[#6D4F25] cursor-pointer">Home</li>
-        <li className="hover:text-[#6D4F25] cursor-pointer">Menu</li>
-        <li className="hover:text-[#6D4F25] cursor-pointer">Offer</li>
-        <li className="hover:text-[#6D4F25] cursor-pointer">Services</li>
-        <li className="hover:text-black hover:bg-transparent hover:border-2 hover:border-[#6D4F25] bg-[#6D4F25] lg:px-12 px-6 border-2 py-2 rounded-full cursor-pointer text-white">Login</li>
+        <li className="hover:text-[#6D4F25] cursor-pointer">
+          <NavLink to={"/"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#6D4F25]" : "")}>
+            Home
+          </NavLink>
+        </li>
+        <li className="hover:text-[#6D4F25] cursor-pointer">
+          <NavLink to={"/menu"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#6D4F25]" : "")}>
+            Menu
+          </NavLink>
+        </li>
+        <li className="hover:text-[#6D4F25] cursor-pointer">
+          <NavLink to={"/offer"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#6D4F25]" : "")}>
+            Offer
+          </NavLink>
+        </li>
+        <li className="hover:text-[#6D4F25] cursor-pointer">
+          <NavLink to={"/service"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#6D4F25]" : "")}>
+            Service
+          </NavLink>
+        </li>
+        <li className="hover:text-black hover:bg-transparent hover:border-2 hover:border-[#6D4F25] bg-[#6D4F25] lg:px-12 px-6 border-2 py-2 rounded-full cursor-pointer text-white">
+          <NavLink to={"/cart"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "" : "")}>
+            Login
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

@@ -3,7 +3,7 @@ import React from "react";
 export default function AboutUs() {
   return (
     <section id="about-us" className="flex xl:text-2xl text-xl gap-6 text-[#6D4F25] py-8">
-      <img src="img/aboutus-img.png" alt="" className="w-1/3" />
+      <img src="img/aboutus-img.png" alt="" className="lg:w-1/3 hidden lg:block" />
       <div className="xl:space-y-12 space-y-8">
         <div className="xl:space-y-4 space-y-2">
           <h1 className="text-xl text-right">ABOUT US</h1>
