@@ -8,7 +8,7 @@ export default function Hero() {
         <p className="">Flavorsome is where bold flavors, fresh ingredients, and heartfelt cooking come together to satisfy your every craving.</p>
         <button className="hover:text-black hover:bg-transparent hover:border-2 hover:border-[#6D4F25] bg-[#6D4F25] lg:px-12 px-6 border-2 py-2 rounded-full cursor-pointer text-white">{"More About Us ->"}</button>
       </div>
-      <img src="img/hero-img.png" alt="" className="w-5/12" />
+      <img src="img/hero-home-img.png" alt="" className="w-5/12" />
     </section>
   );
 }

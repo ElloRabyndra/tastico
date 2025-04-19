@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="-mx-24 px-24 bg-[#262523] py-16 text-white flex gap-6">
+    <footer id="footer" className="-mx-16 px-16 bg-[#262523] py-16 text-white flex">
       <div className="w-1/3 space-y-8">
         <div className="flex items-center lg:gap-6 gap-2 text-4xl">
           <img src="img/logo-white.png" alt="" className="lg:w-16 w-6" />
