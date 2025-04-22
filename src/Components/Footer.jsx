@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 export default function Footer() {
   return (
@@ -26,10 +27,26 @@ export default function Footer() {
         <div className="border-1 h-full borer-white"></div>
         <ul className="flex-row text-xl space-y-4">
           <li className="font-semibold text-2xl">Page</li>
-          <li>Home</li>
-          <li>Menu</li>
-          <li>Offer</li>
-          <li>Service</li>
+          <li>
+          <NavLink to={"/"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "font-semibold" : "")}>
+            Home
+          </NavLink>
+          </li>
+          <li>
+          <NavLink to={"/menu"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "font-semibold" : "")}>
+            Menu
+          </NavLink>
+          </li>
+          <li>
+          <NavLink to={"/offer"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "font-semibold" : "")}>
+            Offer
+          </NavLink>
+          </li>
+          <li>
+          <NavLink to={"/service"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "font-semibold" : "")}>
+            Service
+          </NavLink>
+          </li>
         </ul>
       </div>
     </footer>
