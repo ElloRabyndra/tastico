@@ -27,26 +27,10 @@ export default function Footer() {
         <div className="md:border-1 h-full md:border-white"></div>
         <ul className="flex-row text-xl space-y-4 md:space-y-6">
           <li className="font-bold text-2xl sm:text-3xl">Page</li>
-          <li>
-          <NavLink to={"/"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "font-semibold" : "")}>
-            Home
-          </NavLink>
-          </li>
-          <li>
-          <NavLink to={"/menu"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "font-semibold" : "")}>
-            Menu
-          </NavLink>
-          </li>
-          <li>
-          <NavLink to={"/offer"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "font-semibold" : "")}>
-            Offer
-          </NavLink>
-          </li>
-          <li>
-          <NavLink to={"/service"} className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "font-semibold" : "")}>
-            Service
-          </NavLink>
-          </li>
+          <li>Home</li>
+          <li>Menu</li>
+          <li>Offer</li>
+          <li>Service</li>
         </ul>
       </div>
     </footer>
