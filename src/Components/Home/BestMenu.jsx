@@ -12,11 +12,9 @@ export default function BestMenu() {
       try {
         const data = await fetchMenus();
 
-        const popularMenus = data.slice(0, 3);
+        setMenus(data);
 
-        console.log(popularMenus);
-
-        setMenus(popularMenus);
+        console.log(data);
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -37,11 +35,7 @@ export default function BestMenu() {
         <h1 className="text-white text-2xl md:text-3xl lg:text-4xl">POPULAR FOOD IN OUR RESTAURANT</h1>
       </div>
 
-      <div className="flex flex-wrap lg:gap-12 gap-6 items-center justify-center">
-        <Card title="Gogigaru Bibimbap" desc="A bowl of harmony, packed with bold Korean flavors." price={"59.000"} />
-        <Card title="Spaghetti Bolognese" desc="A classic Italian favorite with rich, meaty perfection in every twirl." price={"60.000"} />
-        <Card title="Chicken Salted Egg" desc="Golden perfection meets rich salted egg bliss." price={"40.000"} />
-      </div>
+      <div className="flex flex-wrap lg:gap-12 gap-6 items-center justify-center">{menus && menus.map((menu) => <Card key={menu.ID} title={menu.name} desc={menu.cover} price={menu.price} />)}</div>
     </section>
   );
 }
