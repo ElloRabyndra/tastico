@@ -2,9 +2,10 @@ import Login from '../Components/Login/Login';
 
 const LoginPage = () => {
   return (
-    <div>
+    <section id="register" className="flex w-full min-h-screen lg:flex-row ">
       <Login />
-    </div>
+    </section>
+    
   );
 };
 

@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Menu from "./Pages/Menu";
 import Cart from "./Pages/Cart";
 import Register from "./Pages/Register";
+import Login from "./Pages/Login";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="menu" element={<Menu />} />
         <Route path="cart" element={<Cart />} />
         <Route path="register" element={<Register />}></Route>
+        <Route path="login" element={<Login />}></Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>
