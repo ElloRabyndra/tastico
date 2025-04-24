@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card({ title, desc, price }) {
   return (
-    <section id="card" className="bg-white rounded-4xl xl:p-8 p-4 space-y-4 text-base">
+    <section id="card" className="min-w-72 max-w-80 lg:max-w-96  bg-white rounded-4xl xl:p-8 p-4 space-y-4 text-base">
       <img src={`img/${title}.png`} alt={title} />
       <div className="space-y-4 xl:text-xl">
         <h1 className="text-2xl font-semibold">{title}</h1>
