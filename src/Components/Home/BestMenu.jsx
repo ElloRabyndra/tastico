@@ -1,7 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../Card";
+import { fetchMenus } from "../../services/api";
 
 export default function BestMenu() {
+  const [menus, setMenus] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const getMenus = async () => {
+      try {
+        const data = await fetchMenus();
+
+        const popularMenus = data.slice(0, 3);
+
+        console.log(popularMenus);
+
+        setMenus(popularMenus);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    getMenus();
+  }, []);
+
+  if (loading) return <div>Loading best menus...</div>;
+  if (error) return <div>Error loading menus: {error}</div>;
+
   return (
     <section id="best-menu" className="flex flex-col items-center justify-center text-xl space-y-12 -mx-16 px-16 bg-[#E1BC64] py-16">
       <div className="text-center space-y-4">
